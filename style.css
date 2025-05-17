@@ -405,15 +405,17 @@ button[type="submit"]:hover {
 }
 
 .footer-content {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
 .footer-logo {
     border-radius: 20px;
     background-color: #fff;
     width: 250px;
-    margin: 0 auto;
-    padding: 10px;
+    margin: 2px auto;
 }
 
 .footer-logo img {
@@ -423,8 +425,8 @@ button[type="submit"]:hover {
 
 .footer-links {
     display: block;
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .footer-links a {
@@ -705,51 +707,10 @@ button[type="submit"]:hover {
         padding: 1rem;
     }
 
-    .about-card {
-        padding: 1.5rem;
-    }
-
-    .contact-section {
-        padding: 20px;
-    }
-
-    #page2, #page3 {
-        padding: 30px 0;
-    }
-
-    .about-header {
-        margin-bottom: 30px;
-    }
-
-    .about-grid {
-        gap: 1.5rem;
-        margin-bottom: 30px;
-    }
-
-    .products {
-        padding: 10px;
-    }
-
-    .products .image {
-        height: 180px;
-    }
-
-    #page1 {
-        min-height: 100px;
-        padding: 30px 0;
-    }
-    
-    #page1 img {
-        max-height: 300px;
-    }
-
-    .cart, .account {
-        font-size: 1.2rem;
-        color: #33150c;
-    }
-
     .d-flex.align-items-center {
         margin-left: auto;
+        gap: 15px;
+        position: relative;
     }
 
     .navbar-collapse {
@@ -763,6 +724,57 @@ button[type="submit"]:hover {
 
     .nav-links {
         align-items: flex-start;
+    }
+
+    .cart, .account {
+        font-size: 1.2rem;
+        color: #33150c;
+    }
+
+    .cart-mobile {
+        font-size: 1.2rem;
+        color: #33150c;
+        text-decoration: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .cart-mobile:hover {
+        color: #4a1f12;
+    }
+
+    .counter-mobile {
+        width: 18px;
+        height: 18px;
+        display: flex;
+        color: white;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        font-size: 12px;
+        top: 10px;
+        right: 35px;
+    }
+
+    .account-mobile {
+        display: block;
+        color: #33150c;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px 0;
+        margin-top: 10px;
+        border-top: 1px solid rgba(51, 21, 12, 0.1);
+    }
+
+    .account-mobile i {
+        margin-right: 8px;
+    }
+
+    .account-mobile:hover {
+        color: #4a1f12;
     }
 
     #page4 {
