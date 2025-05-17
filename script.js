@@ -10,39 +10,7 @@ window.addEventListener('scroll', function () {
     }
   });
   
-// Cart functionality
-let cart = [];
-let cartTotal = 0;
-
-// DOM Elements
-const cartIcon = document.getElementById('cartIcon');
-const cartTab = document.getElementById('cartTab');
-const closeCart = document.getElementById('closeCart');
-const cartItems = document.getElementById('cartItems');
-const cartTotalElement = document.getElementById('cartTotal');
-const counter = document.querySelector('.counter');
-
-// Create overlay element
-const overlay = document.createElement('div');
-overlay.className = 'cart-overlay';
-document.body.appendChild(overlay);
-
-// Toggle cart
-cartIcon.addEventListener('click', () => {
-  cartTab.classList.add('active');
-  overlay.classList.add('active');
-});
-
-closeCart.addEventListener('click', () => {
-  cartTab.classList.remove('active');
-  overlay.classList.remove('active');
-});
-
-overlay.addEventListener('click', () => {
-  cartTab.classList.remove('active');
-  overlay.classList.remove('active');
-});
-
+// Close navbar when nav links are clicked in responsive view
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -56,39 +24,78 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+// Cart functionality
+let cart = [];
+let cartTotal = 0;
+
+// DOM Elements
+const cartIcon = document.getElementById('cartIcon');
+const cartIconMobile = document.getElementById('cartIconMobile');
+const cartTab = document.getElementById('cartTab');
+const closeCart = document.getElementById('closeCart');
+const cartItems = document.getElementById('cartItems');
+const cartTotalElement = document.getElementById('cartTotal');
+const counter = document.querySelector('.counter');
+const counterMobile = document.querySelector('.counter-mobile');
+
+// Create overlay element
+const overlay = document.createElement('div');
+overlay.className = 'cart-overlay';
+document.body.appendChild(overlay);
+
+// Toggle cart
+function toggleCart() {
+    cartTab.classList.add('active');
+    overlay.classList.add('active');
+}
+
+cartIcon.addEventListener('click', toggleCart);
+cartIconMobile.addEventListener('click', toggleCart);
+
+closeCart.addEventListener('click', () => {
+    cartTab.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+overlay.addEventListener('click', () => {
+    cartTab.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
 // Add to cart functionality
 document.querySelectorAll('.btn').forEach(button => {
-  button.addEventListener('click', (e) => {
-    const product = e.target.closest('.products');
-    const productName = product.querySelector('.name').textContent;
-    const productPrice = parseFloat(product.querySelector('.price').textContent.replace('₱', '').replace(',', ''));
-    const productImage = product.querySelector('img').src;
+    button.addEventListener('click', (e) => {
+        const product = e.target.closest('.products');
+        const productName = product.querySelector('.name').textContent;
+        const productPrice = parseFloat(product.querySelector('.price').textContent.replace('₱', '').replace(',', ''));
+        const productImage = product.querySelector('img').src;
 
-    addToCart(productName, productPrice, productImage);
-    updateCartDisplay();
-  });
+        addToCart(productName, productPrice, productImage);
+        updateCartDisplay();
+    });
 });
 
 function addToCart(name, price, image) {
-  const existingItem = cart.find(item => item.name === name);
-  
-  if (existingItem) {
-    existingItem.quantity += 1;
-  } else {
-    cart.push({
-      name,
-      price,
-      image,
-      quantity: 1
-    });
-  }
-  
-  updateCounter();
+    const existingItem = cart.find(item => item.name === name);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            name,
+            price,
+            image,
+            quantity: 1
+        });
+    }
+    
+    updateCounter();
 }
 
 function updateCounter() {
-  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  counter.textContent = totalItems;
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    counter.textContent = totalItems;
+    counterMobile.textContent = totalItems;
 }
 
 function updateCartDisplay() {
