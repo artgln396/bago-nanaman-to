@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fiori d'Amore</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="logo"><a href="#page1">Fiori d'Amore</a></div>
+      <div class="d-flex align-items-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="nav-links">
+          <a href="#page1">HOME</a>
+          <a href="#page3">PRODUCTS</a>
+          <a href="#page4">CONTACT US</a>
+        </div>
+        <div class="icons d-none d-lg-flex">
+          <a class="account" href="register.html"><i class="fas fa-user"></i></a>
+          <a class="cart" id="cartIcon" href="javascript:void(0);"><i class="fas fa-shopping-cart"></i></a>
+          <span class="counter">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Tab -->
+  <div class="cart-tab" id="cartTab">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be added here dynamically -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">₱0.00</span>
+      </div>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+  
+  <section id="page1" class="page">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="walangya.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6">
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <section id="page3" class="page">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="products">  
+            <div class="image"><img src="1.png" alt="" class="img-fluid"></div>
+            <div class="info">
+              <div class="name">DREAM</div>
+              <div class="price">₱1,000</div>
+              <button class="btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="products">  
+            <div class="image"><img src="3.png" alt="" class="img-fluid"></div>
+            <div class="info">
+              <div class="name">SWEET</div>
+              <div class="price">₱1,200</div>
+              <button class="btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="products">  
+            <div class="image"><img src="4.png" alt="" class="img-fluid"></div>
+            <div class="info">
+              <div class="name">BLOSSOM</div>
+              <div class="price">₱1,100</div>
+              <button class="btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="products">  
+            <div class="image"><img src="5.png" alt="" class="img-fluid"></div>
+            <div class="info">
+              <div class="name">FLORAL</div>
+              <div class="price">₱1,600</div>
+              <button class="btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="products">  
+            <div class="image"><img src="6.png" alt="" class="img-fluid"></div>
+            <div class="info">
+              <div class="name">RED HEART</div>
+              <div class="price">₱3,000</div>
+              <button class="btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="products">  
+            <div class="image"><img src="7.png" alt="" class="img-fluid"></div>
+            <div class="info">
+              <div class="name">WHITE</div>
+              <div class="price">₱1,300</div>
+              <button class="btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="products">  
+            <div class="image"><img src="2.png" alt="" class="img-fluid"></div>
+            <div class="info">
+              <div class="name">DEEPEST</div>
+              <div class="price">₱2,000</div>
+              <button class="btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="products">  
+            <div class="image"><img src="8.png" alt="" class="img-fluid"></div>
+            <div class="info">
+              <div class="name">BLOOMING</div>
+              <div class="price">₱3,000</div>
+              <button class="btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="page4" class="page">
+    <div class="container">
+      <div class="contact-section">
+        <div class="contact-box">
+          <div class="contact-info">
+            <h2>Contact Info</h2>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Muntinlupa<br>Poblacion, Southville3<br>P2, B6, L44</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>fiorid'am0re@gmail.com</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <p>213-214-2006</p>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" placeholder="First Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" placeholder="Mobile Number">
+                </div>
+                <div class="col-12">
+                  <textarea placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-content">
+              <div class="footer-links">
+                <a href="aboutus.html">ABOUT US</a>
+                <a href="#page3">WHAT'S NEW</a>
+                <a href="#page4">CONTACT US</a>
+                <a href="#page4">STUDENT PROFILE</a>
+              </div>             
+              <div class="footer-logo">
+                <img src="walangya.png" alt="Fiori d'Amore Logo" class="img-fluid">
+              </div>
+            </div>
+            <div class="copyright">
+              <p>&copy; 2025 Fiori d'Amore. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
